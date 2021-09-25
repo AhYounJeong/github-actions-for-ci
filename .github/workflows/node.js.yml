@@ -21,7 +21,10 @@ jobs:
 
 
     strategy:
-      matrix:
+      - uses: actions/upload-artifact@master
+        with:
+          name: webpack artifacts
+          path: public/
         os
         node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
